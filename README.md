@@ -1,43 +1,38 @@
-Your CS 4560 Repository
-=======================
+# Web Browser Project
+The Web Browser Project is a detailed and practical venture into the development of a basic web browser. Inspired by real-world architectures of modern browsers, this project is based on Python 3, utilizing libraries for TLS connections, and JavaScript evaluation. Though the browser is simplified and not fully standards-compliant, its core architecture and functionality provide deep insights into the complexity of web browsers.
 
-You'll be using this repository to do and submit homework assignments
-for CS 4560.
+### Installation
+1. Clone or download the repository.
+2. Ensure Python 3 is installed on your system. You can check this by running `python3 --version` in your command line.
+3. Navigate to the downloaded project directory.
+4. Install necessary dependencies
+5. Run the browser using `python3 browser.py`.
 
-Setup
------
+### Features
+- **Basic HTML Rendering:** Renders a simplified version of HTML content.
+- **CSS Styling:** Limited support for CSS to style web pages.
+- **JavaScript Interaction:** Uses DukPy for JavaScript evaluation, allowing basic interaction.
+- **Simple Networking:** Support for HTTP and HTTPS protocols with basic TLS connections.
+- **Custom GUI:** Utilizes the Tkinter library for graphical user interface.
+- **Navigation Controls:** Basic back and forward navigation through web history.
 
-Clone this repository to your computer and then run the following
-command to also download the autograder:
+### Advanced Features
+- **Interactive Tabs:** Manage multiple webpages through tabbed browsing.
+- **Form Handling:** Supports basic form submissions and input handling.
+- **Event Handling:** Implements a simple event handling system for user interactions.
+- **Custom Layout Engine:** Own implementation of a document layout engine for rendering pages.
+- **Bookmark Management:** Basic functionality for bookmarking pages.
+- **Script Execution Safety:** Rudimentary content security policy implementation.
 
-	git submodule update --init
+### Programming Concepts Covered
+- **Networking:** socket, urllib, and SSL modules for handling web requests.
+- **Dynamic Rendering:** Utilizing Tkinter for dynamic GUI updates.
+- **Data Structures:** Efficient use of lists, dictionaries, and custom objects.
+- **Error Handling:** Basic exception handling for network, rendering, and scripting errors.
+- **Code Modularization:** Organized into multiple modules and classes for readability and maintenance.
 
-If the autograder is ever updated, you can download the updates using:
+### Acknowledgments
+- The project is built along with the concepts and chapters presented in the book: https://browser.engineering/
 
-	git submodule update --remote
+_Last Updated: April 8, 2024_
 
-That will make changes to the `.gitmodules` file; those changes are
-safe to commit and push.
-
-Work
-----
-
-Implement your web browser in `browser.py`. If you'd like, feel free
-to split your browser into multiple files, as long as you import them
-into `browser.py`, like this:
-
-	from http import *
-	from ui import *
-	from layout import *
-	...
-
-Autograder
-----------
-
-Every time you push, the autograder will run. You can see the results
-by clicking the Actions tab at the top of this page. If you click on
-one of the runs on Actions page, you'll see a grade summary at the
-bottom of the page.
-
-You can see more information about the autograder, and its test, in
-[that repository](https://github.com/cs4560-utah-sp24/test/tree/main).
