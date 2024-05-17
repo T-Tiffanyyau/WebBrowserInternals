@@ -176,6 +176,10 @@ class URL:
 
 COOKIE_JAR = {}
 
+import os
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+js_file_path = os.path.join(dir_path, "runtime.js")
 
 class JSContext:
     def __init__(self, tab):
@@ -193,7 +197,7 @@ class JSContext:
         self.interp.export_function("get_cookies", self.getCookies)
         self.interp.export_function("set_cookies", self.setcookies)
 
-        with open("runtime.js") as f:
+        with open(js_file_path) as f:
             self.interp.evaljs(f.read())
 
         self.node_to_handle = {}
