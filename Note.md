@@ -4,6 +4,21 @@ This detailed analysis describes how the provided Python-based web browser initi
 
 ### Step-by-Step Analysis
 
+1. main: initializes the Tkinter main loop, creates a new browser instance, and loads the specified URL in a new tab.
+2. URL: The `URL` class parses the URL into its components (scheme, host, port, path, fragment).
+3. The `load` method of the `Tab` class sends an HTTP request to the server, retrieves the response, and processes the HTML content. It initializes the JavaScript context, runs the scripts, loads CSS, and renders the content.
+4. The `request` method in the `URL` class creates a socket connection, sends the HTTP request, handles cookies and referrer policies, and reads the response.
+5. The `HTMLParser` class parses the HTML content into a tree of nodes representing the structure of the document.
+6. The `JSContext` class initializes the JavaScript interpreter using `dukpy` and exports Python functions to be called from JavaScript. The `run` method executes JavaScript code within the interpreter.
+7. JavaScript calls python to excute python logic
+
+Why use Javascript:
+- Dynamic Content and Interactivity:
+- DOM Manipulation: JavaScript is specifically designed for manipulating the Document Object Model (DOM), allowing developers to create dynamic and interactive web pages.
+- Event Handling: JavaScript excels at handling user interactions such as clicks, form submissions, and keyboard events, making it essential for interactive web applications.
+
+### Step-by-Step Analysis (with code)
+
 ### Initialization and URL Handling
 
 1. **Browser Initialization**:
